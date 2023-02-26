@@ -12,10 +12,8 @@ public class Rocket
     {
         x=400;
         y=400;
-        dx=10;
-        dy=10;
         Image imgRocket = new Image (getClass().getResourceAsStream("rocket.png"));
-        ivRocket = new ImageView(imgRocket);
+        ivRocket = new ImageView (imgRocket);
         ivRocket.setLayoutX(x);
         ivRocket.setLayoutY(y);
     }
@@ -23,5 +21,23 @@ public class Rocket
     public ImageView getImageView()
     {
         return ivRocket;
+    }
+
+    void moveLeft() 
+    {
+        if(x>50)
+        {
+            x = x - dx;
+            ivRocket.setLayoutX(x);
+        }
+    }
+
+    void moveRight() 
+    {
+        if(x<50)
+        {
+            x = x + dx;
+            ivRocket.setLayoutX(x);
+        }
     }
 }

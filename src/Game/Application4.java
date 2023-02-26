@@ -1,15 +1,16 @@
 package Game;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class Application4 extends Application
 {
-
     Rocket rocket;
     Baddie baddie;
     
@@ -28,6 +29,29 @@ public class Application4 extends Application
         g.getChildren().add(ivBack);
         g.getChildren().add(rocket.getImageView());
         g.getChildren().add(baddie.getImageView());
+        
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() 
+        {
+            @Override
+            public void handle(KeyEvent event) 
+            {
+                switch (event.getCode())
+                {
+                    case LEFT:
+                        rocket.moveLeft();
+                        event.consume();
+                        break;
+                        
+                    case RIGHT:
+                        rocket.moveRight();
+                        break;
+                    case SPACE:
+                        //not implemented yet
+                    default:
+                }
+            }
+        
+    });
         
         primaryStage.setTitle("Flyer");
         primaryStage.setScene(scene);

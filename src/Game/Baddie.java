@@ -5,20 +5,20 @@ import javafx.scene.image.ImageView;
 
 public class Baddie 
 {
-    int dx,dy;
+     int x,y,dx,dy;
     ImageView ivBaddie;
     
     Baddie()
     {
-        int dx = 10;
-        int dy = 10;
-        Image imgBaddie = new Image (getClass().getResourceAsStream("Baddie.png"));
-        ivBaddie = new ImageView (imgBaddie);
+        dx=10;
+        dy=10;
+        Image imgRocket = new Image (getClass().getResourceAsStream("Baddie.png"));
+        ivBaddie = new ImageView (imgRocket);
         ivBaddie.setLayoutX(dx);
         ivBaddie.setLayoutY(dy);
     }
     
-     public ImageView getImageView()
+    public ImageView getImageView()
     {
         return ivBaddie;
     }
