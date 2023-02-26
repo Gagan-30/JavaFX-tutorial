@@ -1,4 +1,4 @@
-package application1;
+package Labels;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

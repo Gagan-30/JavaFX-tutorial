@@ -15,5 +15,13 @@ public class Rocket
         dx=10;
         dy=10;
         Image imgRocket = new Image (getClass().getResourceAsStream("rocket.png"));
+        ivRocket = new ImageView(imgRocket);
+        ivRocket.setLayoutX(x);
+        ivRocket.setLayoutY(y);
+    }
+    
+    public ImageView getImageView()
+    {
+        return ivRocket;
     }
 }
