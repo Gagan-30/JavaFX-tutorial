@@ -1,4 +1,4 @@
-# JavaFX-tutorials
+# JavaFX-tutorial
 
 https://yatishparmar.com
 
